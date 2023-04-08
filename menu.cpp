@@ -229,7 +229,7 @@ Cell* Sheet::edit(int *wskx, int *wsky)
     cout << "Wprowadź współrzędne komórki" << endl;
     cout << "Podaj numer wiersza: ";
     cin >> *wskx;
-    while((*wskx>r1))
+    while((*wskx>r1) || (*wskx == 0))
     {
         cout << "BŁĄD - nie ma takiego wiersza!" << endl;
         cout << "Podaj numer wiersza: ";
@@ -239,7 +239,7 @@ Cell* Sheet::edit(int *wskx, int *wsky)
 
     cout << "Podaj numer kolumny: ";
     cin >> *wsky;
-    while((*wsky>r2))
+    while((*wsky>r2) || (*wsky == 0))
     {
         cout << "BŁĄD - nie ma takiej kolumny!" << endl;
         cout << "Podaj numer kolumny: ";
